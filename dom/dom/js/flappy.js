@@ -61,7 +61,9 @@ function Barreira(altura, largura, abertura, espaco, notificarPonto) {
           
             
             //quando o elemento sair da área do jogo
-            if (par.getX())
+            if (par.getX() < -par.getLargura()) {
+                par.setX(par.getX() + espaco * this.pares.length)
+            }
         })
     }
 
