@@ -34,4 +34,14 @@ function ParDeBarreiras(altura, abertura, x) {
         this.superior.setAltura(alturaSuperior)
         this.inferior.setAltura(alturaInferior)
     }
+
+    this.getX = () => parseInt(this.elemento.style.left.split("px")[0])
+    this.setX = x => this.elemento.style.left = `${x}px`
+    this.getLargura = () => this.elemento.clienWidth
+
+    this.sortearAbertura()
+    this.setX(x)
 }
+
+const b = new ParDeBarreiras(700, 200, 400)
+document.querySelector("[wm-flappy]").appendChild(b.elemento)
