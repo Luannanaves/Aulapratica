@@ -85,7 +85,9 @@ function Passaro(alturaJogo) {
     window.onkeydown = e => voando = true
     window.onkeyup = e => voando = false 
 
-    this.animar
+    this.animar = () => {
+        const novoY = this.getY() + (voando ? 8 : -5)
+    }
 }
 
 const barreiras = new Barreiras(700, 1200, 200, 400)
