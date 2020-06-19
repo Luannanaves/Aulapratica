@@ -73,6 +73,21 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
     }
 }
 
+function Passaro(alturaJogo) {
+    let voando = false
+
+    this.elemento = novoElemento ("img", "passaro")
+    this.elemento.src = "imgs/passaro.png"
+
+    this.getY = () => parseInt(this.elemento.style.bottom.split("px")[0])
+    this.setY = y => this.elemento.style.bottom = `${y}px`
+
+    window.onkeydown = e => voando = true
+    window.onkeyup = e => voando = false 
+
+    this.animar
+}
+
 const barreiras = new Barreiras(700, 1200, 200, 400)
 const areaDoJogo = document.querySelector("[wm-flappy]")
 barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
