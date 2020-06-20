@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'Pixel';
-    src: url('../fonts/Pixel.ttf');
+    src: url('fonts/Pixel.ttf');
 }
 
 html {
@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100%;
-    
+    font-family: Pixel;
     font-size: 20px;
 }
 
@@ -79,6 +79,7 @@ body {
     right: 10px;
     font-family: Pixel;
     font-size: 70px;
+    z-index: 100;
 }
 
 .game-over {
@@ -89,6 +90,7 @@ body {
     font-size: 150px;
     z-index: 100;
 }
+
 .restart {
     position: absolute;
     top: 50%;
