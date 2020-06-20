@@ -207,6 +207,15 @@ function FlappyBird() {
     this.start = () => {
         
         const temporizador = setInterval(() => {
-            
+            passaro.animar()
+
+            if (colidiu(passaro, barreiras)) { 
+                clearInterval(temporizador) 
+                areaDoJogo.appendChild(fimJogo.elemento) 
+                areaDoJogo.appendChild(restart.elemento) 
+            }
+        }, 20)
+    }
+}
 
 
